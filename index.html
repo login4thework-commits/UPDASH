@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assembly Caste Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-left">
+          <div class="hero-copy">
+            <p class="hero-subtitle">ASSEMBLY DASHBOARD</p>
+            <h1 class="hero-title-accent">UTTAR PRADESH ASSEMBLY REPORT</h1>
+          </div>
+
+          <section class="table-panel compact-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">2022 Overview</p>
+                <h2>Results by alliance and party</h2>
+              </div>
+            </div>
+
+            <div class="table-wrap overview-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Alliance</th>
+                    <th>Party</th>
+                    <th>Contested</th>
+                    <th>Won</th>
+                    <th>Popular Vote</th>
+                    <th>Vote %</th>
+                    <th>Seat +/-</th>
+                  </tr>
+                </thead>
+                <tbody id="alliance-results-body">
+                  <tr>
+                    <td colspan="7" class="empty-state">Loading alliance results...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="source-note">
+              Source:
+              <a
+                href="https://en.wikipedia.org/wiki/2022_Uttar_Pradesh_Legislative_Assembly_election#Results_by_alliance_and_party"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Wikipedia 2022 Uttar Pradesh Legislative Assembly election
+              </a>
+            </p>
+          </section>
+
+          <section class="table-panel compact-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">LOCAL BODY ELECTION RESULT</p>
+                <h2>मान्यता प्राप्त राजनीतिक दलों के निर्वाचित प्रत्याशियों की संख्या</h2>
+              </div>
+            </div>
+
+            <div class="table-wrap sec-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="compact-index-col" rowspan="2">क्रमांक</th>
+                    <th rowspan="2">पार्टी का नाम</th>
+                    <th colspan="2" class="group-header">नगर निगम</th>
+                    <th colspan="2" class="group-header">नगर पालिका परिषद</th>
+                    <th colspan="2" class="group-header">नगर पंचायत</th>
+                  </tr>
+                  <tr>
+                    <th class="group-header">महापौर</th>
+                    <th class="group-header">पार्षद</th>
+                    <th class="group-header">अध्यक्ष</th>
+                    <th class="group-header">सदस्य</th>
+                    <th class="group-header">अध्यक्ष</th>
+                    <th class="group-header">सदस्य</th>
+                  </tr>
+                </thead>
+                <tbody id="sec-party-results-body">
+                  <tr>
+                    <td colspan="8" class="empty-state">Loading SEC UP data...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="source-note">
+              Source:
+              <a
+                href="https://sec.up.nic.in/site/PoliticalPartyWiseStatistic.aspx"
+                target="_blank"
+                rel="noreferrer"
+              >
+                State Election Commission, Uttar Pradesh
+              </a>
+            </p>
+          </section>
+        </div>
+
+        <div class="hero-right">
+          <section class="table-panel stats-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">UP Summary</p>
+                <h2>Key administrative totals</h2>
+              </div>
+            </div>
+            <div class="stats-grid">
+              <article class="stat-card">
+                <span class="stat-label">Total Assembly</span>
+                <strong>403</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-label">Total District</span>
+                <strong>80</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-label">Total Blocks</span>
+                <strong>826</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-label">Total Village Panchayats</span>
+                <strong>58,189</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-label">Total Kshetra Panchayat</span>
+                <strong>824</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-label">Total Zila Panchayats</span>
+                <strong>75</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-label">Total Municipal Corporations</span>
+                <strong>17</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-label">Total Nagar Palika Parishads</span>
+                <strong>199</strong>
+              </article>
+              <article class="stat-card">
+                <span class="stat-label">Total Nagar Panchayats</span>
+                <strong>544</strong>
+              </article>
+            </div>
+          </section>
+
+          <section class="map-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">UP Result Map</p>
+                <h2>2022 alliance-wise result map</h2>
+              </div>
+            </div>
+            <div class="map-frame">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/2022%20Uttar%20Pradesh%20Legislative%20Assembly%20election%20results%20by%20constituency%20(winners,%20alliance-wise).svg"
+                alt="2022 Uttar Pradesh election alliance-wise result map"
+              />
+            </div>
+            <p class="source-note">
+              Source:
+              <a
+                href="https://en.wikipedia.org/wiki/2022_Uttar_Pradesh_Legislative_Assembly_election#Results_by_alliance_and_party"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Wikipedia
+              </a>
+            </p>
+          </section>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="table-panel" id="history-filter-section">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Election Pattern Filter</p>
+              <h2>Party-wise recent election filter</h2>
+            </div>
+            <div class="table-summary">
+              <span id="history-filter-count">0 assemblies</span>
+            </div>
+          </div>
+
+          <div class="filter-grid">
+            <div class="filter-field">
+              <label class="field-label" for="history-party-select">Select Party</label>
+              <select id="history-party-select" class="assembly-select">
+                <option value="">Loading parties...</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label class="field-label" for="history-rule-select">Select Condition</label>
+              <select id="history-rule-select" class="assembly-select">
+                <option value="won_last_3">Last 3 Election Winner Party</option>
+                <option value="won_last_2">Last 2 Election Winner Party</option>
+                <option value="lost_last_3">Last 3 Election Lost</option>
+                <option value="lost_last_2">Last 2 Election Lost</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Assembly</th>
+                  <th>Relevant Results</th>
+                  <th class="mobile-hide">Status</th>
+                </tr>
+              </thead>
+              <tbody id="history-filter-body">
+                <tr>
+                  <td colspan="3" class="empty-state">Loading election pattern filter...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination-bar" id="history-pagination"></div>
+        </section>
+
+        <section class="table-panel dashboard-panel" aria-live="polite">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Assembly Dashboard</p>
+              <h2>Assembly Snapshot</h2>
+            </div>
+          </div>
+
+          <div class="dashboard-select-wrap">
+            <label class="field-label" for="assembly-search">Search Assembly</label>
+            <input
+              id="assembly-search"
+              class="assembly-search"
+              type="search"
+              placeholder="Type assembly name or AC number"
+            />
+            <label class="field-label" for="assembly-select">Select Assembly</label>
+            <select id="assembly-select" class="assembly-select">
+              <option value="">Loading assemblies...</option>
+            </select>
+            <p id="meta-text" class="meta-text">Preparing local data...</p>
+          </div>
+
+          <div class="insight-grid">
+            <article class="insight-card">
+              <span class="snapshot-label">Top Caste</span>
+              <strong id="top-caste">-</strong>
+            </article>
+            <article class="insight-card">
+              <span class="snapshot-label">2022 Margin %</span>
+              <strong id="latest-margin">-</strong>
+            </article>
+            <article class="insight-card">
+              <span class="snapshot-label">2022 Turnout</span>
+              <strong id="latest-turnout">-</strong>
+            </article>
+          </div>
+
+          <div class="snapshot-grid" id="snapshot-grid">
+            <article class="snapshot-card">
+              <span class="snapshot-label">Assembly Name</span>
+              <strong id="assembly-name">-</strong>
+            </article>
+            <article class="snapshot-card">
+              <span class="snapshot-label">MLA Name</span>
+              <strong id="mla-name">-</strong>
+            </article>
+            <article class="snapshot-card">
+              <span class="snapshot-label">Party</span>
+              <strong id="party-name" class="party-badge">-</strong>
+            </article>
+            <article class="snapshot-card">
+              <span class="snapshot-label">District</span>
+              <strong id="district-name">-</strong>
+            </article>
+            <article class="snapshot-card">
+              <span class="snapshot-label">Zone</span>
+              <strong id="zone-name">-</strong>
+            </article>
+            <article class="snapshot-card">
+              <span class="snapshot-label">Total Population</span>
+              <strong id="total-population">-</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="table-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Caste Calculation</p>
+              <h2>Caste population table</h2>
+            </div>
+            <div class="table-summary">
+              <span id="row-count">0 rows</span>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Caste</th>
+                  <th>Percentage</th>
+                  <th>Category</th>
+                  <th>Caste Population</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                <tr>
+                  <td colspan="5" class="empty-state">Loading data...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="table-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Election Results</p>
+              <h2>Election results year wise</h2>
+            </div>
+            <div class="table-summary">
+              <span id="election-row-count">0 years</span>
+            </div>
+          </div>
+
+          <div id="election-results-container">
+            <div class="table-wrap">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="empty-state">Loading election results...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

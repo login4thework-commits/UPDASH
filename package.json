@@ -1,0 +1,13 @@
+{
+  "name": "caste-assembly-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/build-data.mjs"
+  },
+  "dependencies": {
+    "csv-parse": "^6.2.1",
+    "xlsx": "^0.18.5"
+  }
+}
